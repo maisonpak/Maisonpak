@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Maisonpak Temizlik Hizmetleri | Başakşehir</title>
+<meta name="description" content="Başakşehir, Esenyurt, Beylikdüzü, Avcılar ve çevre ilçelerde profesyonel ev, ofis ve derin temizlik hizmeti. 0540 221 75 02"/>
+<meta name="keywords" content="Başakşehir temizlik, Esenyurt temizlik, Beylikdüzü temizlik, ev temizliği, ofis temizliği, derin temizlik, halı yıkama, dezenfeksiyon, Maisonpak"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Maisonpak Temizlik Hizmetleri | Başakşehir"/>
+<meta property="og:description" content="Başakşehir merkezli profesyonel temizlik hizmeti. Ev, ofis, derin temizlik, halı yıkama. Hemen teklif alın!"/>
+<meta property="og:url" content="https://www.maisonpak.com"/>
+<meta property="og:type" content="website"/>
+<link rel="canonical" href="https://www.maisonpak.com"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232e2e35'/><text y='.9em' font-size='70' x='15' fill='%23b87333'>M</text></svg>"/>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#f5f4f2;color:#1c1c1e;overflow-x:hidden}
+.sf{font-family:'Playfair Display',serif}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.fu{animation:fadeUp .8s ease forwards}
+.cl{transition:transform .3s,box-shadow .3s}
+.cl:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.1)}
+.cb{background:linear-gradient(135deg,#b87333,#e8a855);color:#fff;border:none;padding:14px 32px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block}
+.cb:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(184,115,51,.35)}
+.tag{display:inline-block;border:1px solid #b87333;color:#b87333;padding:5px 16px;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase}
+.wa{position:fixed;bottom:24px;right:24px;z-index:999;width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;box-shadow:0 6px 20px rgba(37,211,102,.4);transition:transform .3s}
+.wa:hover{transform:scale(1.1)}
+.bt{position:fixed;bottom:88px;right:24px;z-index:999;width:40px;height:40px;background:#2e2e35;color:#d4924a;border:none;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.tab-btn{padding:10px 16px;border:none;background:transparent;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;transition:all .25s;white-space:nowrap}
+input,select,textarea{border:1px solid #dbd8d0;background:#faf9f7;padding:12px 15px;font-family:'DM Sans',sans-serif;font-size:14px;width:100%;outline:none;color:#1c1c1e;box-sizing:border-box;transition:border .3s}
+input:focus,select:focus,textarea:focus{border-color:#b87333}
+textarea{resize:vertical;min-height:80px}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:#b87333}
+::-webkit-scrollbar-track{background:#f5f4f2}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react">
+
+const W3F = "43352c6e-8c37-4321-822f-73a6f025086a";
+
+const BRAND = {
+  fullName: "Maisonpak Temizlik Hizmetleri",
+  founded: "2015",
+  phone: "0540 221 75 02",
+  phoneTel: "+905402217502",
+  whatsapp: "905402217502",
+  email: "temizlik@maisonpak.com",
+  address: "Başakşehir Mah. Kayabaşı Cad. No:14 Kat:2, Başakşehir / İstanbul",
+  hours: "Pazartesi–Cumartesi: 08:00–20:00 | Pazar: 10:00–17:00",
+};
+
+const SERVICES = [
+  {id:"ev",icon:"🏠",title:"Ev Temizliği",desc:"Yaşam alanınızın her köşesi profesyonel ellerde pırıl pırıl olur. Mutfak, banyo, yatak odası titizlikle temizlenir.",items:["Mutfak & banyo derin temizliği","Tüm yüzeyler silinir & dezenfekte edilir","Zemin yıkama & cilalama","Cam & ayna temizliği"]},
+  {id:"ofis",icon:"🏢",title:"Ofis Temizliği",desc:"Verimli ve hijyenik çalışma ortamı için düzenli ofis temizlik paketleri. Mesai sonrası seçenekler mevcuttur.",items:["Masa & çalışma alanları","Toplantı odaları","Mutfak & dinlenme alanları","Tuvalet & soyunma odaları"]},
+  {id:"derin",icon:"✨",title:"Derin Temizlik",desc:"Taşınma öncesi ya da sonrası, yıllık kapsamlı derin temizlik hizmeti. Her köşe, her yüzey.",items:["Fırın & beyaz eşya içi","Buzdolabı & çekmece içleri","Duvar & tavan temizliği","Mobilya arkası & altları"]},
+  {id:"cam",icon:"🪟",title:"Cam & Pencere",desc:"İç ve dış cephe dahil tüm cam yüzeylerde çizik bırakmayan özel solüsyonla kusursuz temizlik.",items:["İç & dış cam yüzeyleri","Pencere çerçeveleri & raylar","Balkon & teras camları","Leke & kireç çözücü uygulama"]},
+  {id:"koltuk",icon:"🛋️",title:"Koltuk & Halı",desc:"Profesyonel buharlı yıkama sistemiyle leke, akar ve kötü koku tamamen uzaklaştırılır.",items:["Buharlı derin yıkama","Leke & akar uzaklaştırma","Koku nötralizasyonu","Kuruma süresi: 2–4 saat"]},
+  {id:"dezenfeksiyon",icon:"🦠",title:"Dezenfeksiyon",desc:"Hastane standartlarında dezenfeksiyon. Virüs ve bakterilere karşı tam koruma, belgelenmiş rapor.",items:["Covid-19 & grip virüsü","Bakteri & mantar temizliği","ULV soğuk sisleme","Belgelenmiş hijyen raporu"]},
+  {id:"boya",icon:"🔨",title:"Boya & Tadilat",desc:"Küçük tadilat, boya badana ve yenileme işlemleri için güvenilir ekibimizle tek durak çözüm.",items:["İç cephe boya & badana","Alçı & sıva onarımı","Fayans & zemin yenileme","Mobilya montaj & demontaj"]},
+];
+
+const AREAS = ["Başakşehir","Esenyurt","Beylikdüzü","Avcılar","Bağcılar","Bahçelievler","Güngören","Küçükçekmece","Sultangazi","Esenler","Bayrampaşa","Gaziosmanpaşa"];
+
+const REVIEWS = [
+  {name:"Selin Arslan",city:"Başakşehir",stars:5,text:"Ev temizliği için geldiler, gerçekten çok memnun kaldım. Her köşeye özen gösterdiler. Artık düzenli müşterileriyiz.",initials:"SA"},
+  {name:"Murat Çelik",city:"Esenyurt",stars:5,text:"Ofisimizi haftada bir temizliyorlar. Ekip çok profesyonel, her zaman zamanında geliyor.",initials:"MÇ"},
+  {name:"Aylin Kaya",city:"Beylikdüzü",stars:5,text:"Taşınmadan önce derin temizlik yaptırdık. Ev adeta yenilendi! Fırın ve banyoyu görmeden inanmazdım.",initials:"AK"},
+  {name:"Kerem Doğan",city:"Bağcılar",stars:5,text:"Koltuk ve halı buharlı yıkama için çağırdım. Eski lekeler tamamen çıktı. Çok hızlı ve temiz hizmet.",initials:"KD"},
+  {name:"Deniz Yıldız",city:"Küçükçekmece",stars:5,text:"Dezenfeksiyon hizmeti aldık. Rapor da verdiler, çok güven verici. Bebek odası için idealdi.",initials:"DY"},
+  {name:"Hande Şahin",city:"Avcılar",stars:5,text:"Cam temizliği için geldiler, inanılmaz netlik! Dış cepheye de çıktılar. Kesinlikle tavsiye ederim.",initials:"HŞ"},
+];
+
+const FAQS = [
+  {q:"Hangi bölgelere hizmet veriyorsunuz?",a:"Başakşehir merkezli olarak Esenyurt, Beylikdüzü, Avcılar, Bağcılar, Bahçelievler, Güngören, Küçükçekmece, Sultangazi, Esenler, Bayrampaşa ve Gaziosmanpaşa ilçelerine hizmet veriyoruz."},
+  {q:"Temizlikte kullandığınız ürünler güvenli mi?",a:"Evet. Tüm ürünlerimiz doğal ve ekolojik içeriklidir. Çocuklar, bebekler ve evcil hayvanlar için %100 güvenlidir."},
+  {q:"Nasıl randevu alırım?",a:"0540 221 75 02 numaralı hattımızı arayabilir, WhatsApp'tan yazabilir ya da sitemizdeki formu doldurabilirsiniz. Tüm taleplere 30 dakika içinde dönüş yapıyoruz."},
+  {q:"Fiyatlar nasıl belirleniyor?",a:"Metrekare, oda sayısı ve hizmet türüne göre kişiye özel fiyat belirliyoruz. Teklif tamamen ücretsizdir, herhangi bir yükümlülük doğurmaz."},
+  {q:"Memnun kalmazsam ne olur?",a:"Aynı gün ücretsiz yeniden temizlik yapıyoruz. Herhangi bir şart ya da soru sormuyoruz. Memnuniyetiniz garantimizdir."},
+];
+
+async function gonder(data, konu) {
+  try {
+    const r = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({access_key: W3F, subject: "Maisonpak - " + konu, from_name: data.name || "Ziyaretci", ...data})
+    });
+    return r.ok;
+  } catch(e) { return false; }
+}
+
+function App() {
+  const [scrolled, setScrolled] = React.useState(false);
+  const [activeTab, setActiveTab] = React.useState(0);
+  const [activeFaq, setActiveFaq] = React.useState(null);
+  const [reviewIdx, setReviewIdx] = React.useState(0);
+  const [hf, setHf] = React.useState({name:"",phone:"",email:"",service:"",area:"",date:"",note:""});
+  const [hSub, setHSub] = React.useState(false);
+  const [hLoad, setHLoad] = React.useState(false);
+  const [cf, setCf] = React.useState({name:"",phone:"",email:"",area:"",service:"",msg:""});
+  const [cSub, setCSub] = React.useState(false);
+  const [cLoad, setCLoad] = React.useState(false);
+
+  const wa = encodeURIComponent("Merhaba! Maisonpak Temizlik Hizmetleri hakkinda bilgi almak istiyorum.");
+  const visR = [REVIEWS[reviewIdx], REVIEWS[(reviewIdx+1)%6], REVIEWS[(reviewIdx+2)%6]];
+
+  React.useEffect(() => {
+    const fn = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", fn);
+    return () => window.removeEventListener("scroll", fn);
+  }, []);
+
+  React.useEffect(() => {
+    const t = setInterval(() => setReviewIdx(i => (i+3)%6), 5000);
+    return () => clearInterval(t);
+  }, []);
+
+  const heroGonder = async () => {
+    if (!hf.name || !hf.phone) return alert("Ad ve telefon zorunludur!");
+    setHLoad(true);
+    const ok = await gonder({name:hf.name, phone:hf.phone, email:hf.email, hizmet:hf.service, bolge:hf.area, tarih:hf.date, not:hf.note}, "Teklif Talebi");
+    setHLoad(false);
+    if (ok) setHSub(true);
+    else alert("Hata olustu, WhatsApp'tan yazin!");
+  };
+
+  const iletisimGonder = async () => {
+    if (!cf.name || !cf.phone) return alert("Ad ve telefon zorunludur!");
+    setCLoad(true);
+    const ok = await gonder({name:cf.name, phone:cf.phone, email:cf.email, bolge:cf.area, hizmet:cf.service, mesaj:cf.msg}, "Iletisim Formu");
+    setCLoad(false);
+    if (ok) setCSub(true);
+    else alert("Hata olustu, WhatsApp'tan yazin!");
+  };
+
+  const di = {border:"1px solid rgba(184,115,51,.25)",background:"rgba(255,255,255,.05)",padding:"12px 15px",fontFamily:"'DM Sans',sans-serif",fontSize:14,width:"100%",outline:"none",color:"#f0ece4",boxSizing:"border-box"};
+  const li = {border:"1px solid #dbd8d0",background:"#faf9f7",padding:"12px 15px",fontFamily:"'DM Sans',sans-serif",fontSize:14,width:"100%",outline:"none",color:"#1c1c1e",boxSizing:"border-box"};
+
+  return (
+    <div style={{fontFamily:"'DM Sans',sans-serif",background:"#f5f4f2",color:"#1c1c1e",overflowX:"hidden"}}>
+
+      <a href={"https://wa.me/"+BRAND.whatsapp+"?text="+wa} className="wa" target="_blank">💬</a>
+      {scrolled && <button className="bt" onClick={() => window.scrollTo({top:0,behavior:"smooth"})}>↑</button>}
+
+      {/* NAV */}
+      <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:scrolled?"rgba(28,28,30,.97)":"transparent",backdropFilter:scrolled?"blur(20px)":"none",borderBottom:scrolled?"1px solid rgba(184,115,51,.15)":"none",transition:"all .4s",padding:"0 clamp(16px,4vw,64px)",display:"flex",alignItems:"center",justifyContent:"space-between",height:68}}>
+        <a href="#" style={{display:"flex",alignItems:"center",gap:10,textDecoration:"none"}}>
+          <div style={{width:38,height:38,background:"linear-gradient(135deg,#2e2e35,#3d3d47)",border:"1.5px solid #b87333",display:"flex",alignItems:"center",justifyContent:"center",position:"relative"}}>
+            <span className="sf" style={{fontSize:18,fontWeight:700,color:"#b87333"}}>M</span>
+            <span style={{position:"absolute",bottom:3,right:3,width:5,height:5,background:"#b87333",borderRadius:"50%"}}></span>
+          </div>
+          <div>
+            <div className="sf" style={{fontSize:17,fontWeight:700,color:"#f0ece4",letterSpacing:1.5}}>MAISONPAK</div>
+            <div style={{fontSize:8,color:"#b87333",letterSpacing:4,textTransform:"uppercase"}}>Temizlik Hizmetleri</div>
+          </div>
+        </a>
+        <div style={{display:"flex",gap:12,alignItems:"center"}}>
+          <a href={"tel:"+BRAND.phoneTel} style={{color:"#d4924a",fontSize:13,fontWeight:600,textDecoration:"none"}}>{BRAND.phone}</a>
+          <a href="#iletisim" className="cb" style={{padding:"9px 20px",fontSize:12}}>Teklif Al</a>
+        </div>
+      </nav>
+
+      {/* HERO */}
+      <section style={{minHeight:"100vh",display:"flex",alignItems:"center",background:"linear-gradient(150deg,#0e0e10 0%,#1c1c1e 35%,#2e2e35 70%,#3a3018 100%)",position:"relative",overflow:"hidden",padding:"100px clamp(16px,4vw,64px) 60px"}}>
+        <div style={{position:"absolute",inset:0,backgroundImage:"radial-gradient(circle,rgba(184,115,51,.04) 1px,transparent 1px)",backgroundSize:"36px 36px"}}></div>
+        <div style={{position:"absolute",width:400,height:400,borderRadius:"50%",background:"#b87333",filter:"blur(120px)",opacity:.05,top:-100,right:-80,pointerEvents:"none"}}></div>
+        <div style={{maxWidth:1100,margin:"0 auto",width:"100%",display:"grid",gridTemplateColumns:"1fr 1fr",gap:60,alignItems:"center",position:"relative"}}>
+          <div className="fu">
+            <div className="tag" style={{marginBottom:24}}>✦ Başakşehir ve Çevresi · {BRAND.founded} den Bu Yana</div>
+            <h1 className="sf" style={{fontSize:"clamp(36px,5vw,66px)",fontWeight:700,color:"#f0ece4",lineHeight:1.06,marginBottom:20}}>
+              Yaşam Alanınız <em style={{color:"#d4924a",fontStyle:"italic"}}>Kusursuz</em> Hak Eder
+            </h1>
+            <div style={{width:50,height:2,background:"linear-gradient(90deg,#b87333,#e8a855)",marginBottom:20}}></div>
+            <p style={{color:"rgba(240,236,228,.65)",fontSize:15,lineHeight:1.9,marginBottom:34,maxWidth:420}}>
+              Başakşehir merkezli olarak İstanbul Avrupa Yakası'nda {new Date().getFullYear()-2015} yıllık deneyim ve uzman ekibimizle pırıl pırıl hizmet sunuyoruz.
+            </p>
+            <div style={{display:"flex",gap:12,flexWrap:"wrap",marginBottom:38}}>
+              <a href="#iletisim" className="cb">Randevu Al →</a>
+              <a href={"https://wa.me/"+BRAND.whatsapp+"?text="+wa} target="_blank" style={{display:"flex",alignItems:"center",gap:8,background:"#25d366",color:"#fff",padding:"14px 22px",textDecoration:"none",fontSize:14,fontWeight:600}}>💬 WhatsApp</a>
+            </div>
+            <div style={{display:"flex",gap:28,paddingTop:26,borderTop:"1px solid rgba(184,115,51,.2)",flexWrap:"wrap"}}>
+              {[["1.200+","Müşteri"],["9 Yıl","Tecrübe"],["%100","Memnuniyet"],["12","Bölge"]].map(([v,l]) => (
+                <div key={l}>
+                  <div className="sf" style={{fontSize:26,fontWeight:700,color:"#d4924a"}}>{v}</div>
+                  <div style={{fontSize:10,color:"rgba(240,236,228,.45)",letterSpacing:"2px",textTransform:"uppercase",marginTop:4}}>{l}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="fu" style={{animationDelay:".2s"}}>
+            <div style={{background:"rgba(255,255,255,.04)",backdropFilter:"blur(20px)",border:"1px solid rgba(184,115,51,.25)",padding:"36px 30px",position:"relative"}}>
+              <div style={{position:"absolute",top:0,left:0,right:0,height:2,background:"linear-gradient(90deg,#b87333,#e8a855,#b87333)"}}></div>
+              <h3 className="sf" style={{color:"#f0ece4",fontSize:22,marginBottom:6}}>Ücretsiz Teklif Alın</h3>
+              <p style={{color:"rgba(240,236,228,.45)",fontSize:12,marginBottom:20}}>30 dakika içinde dönüş garantisi</p>
+              <div style={{display:"flex",flexDirection:"column",gap:8}}>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
+                  <input placeholder="Ad Soyad *" style={di} value={hf.name} onChange={e => setHf({...hf,name:e.target.value})}/>
+                  <input placeholder="Telefon *" style={di} value={hf.phone} onChange={e => setHf({...hf,phone:e.target.value})}/>
+                </div>
+                <input placeholder="E-posta" style={di} value={hf.email} onChange={e => setHf({...hf,email:e.target.value})}/>
+                <select style={{...di,background:"rgba(20,20,24,.9)"}} value={hf.service} onChange={e => setHf({...hf,service:e.target.value})}>
+                  <option value="">Hizmet Seçin *</option>
+                  {SERVICES.map(s => <option key={s.id} value={s.title} style={{background:"#2e2e35"}}>{s.icon} {s.title}</option>)}
+                </select>
+                <select style={{...di,background:"rgba(20,20,24,.9)"}} value={hf.area} onChange={e => setHf({...hf,area:e.target.value})}>
+                  <option value="">Bölgenizi Seçin *</option>
+                  {AREAS.map(a => <option key={a} style={{background:"#2e2e35"}}>{a}</option>)}
+                </select>
+                <input type="date" style={di} value={hf.date} onChange={e => setHf({...hf,date:e.target.value})}/>
+                <textarea placeholder="Notlarınız..." style={di} value={hf.note} onChange={e => setHf({...hf,note:e.target.value})}/>
+                {hSub
+                  ? <div style={{background:"rgba(184,115,51,.12)",border:"1px solid rgba(184,115,51,.3)",padding:14,textAlign:"center",color:"#d4924a",fontSize:14}}>✦ Talebiniz alındı! En kısa sürede arayacağız.</div>
+                  : <button onClick={heroGonder} disabled={hLoad} className="cb" style={{width:"100%",textAlign:"center",marginTop:4,opacity:hLoad?0.6:1}}>
+                      {hLoad ? "Gönderiliyor..." : "Teklif Gönder ✦"}
+                    </button>
+                }
+              </div>
+              <p style={{color:"rgba(240,236,228,.2)",fontSize:11,textAlign:"center",marginTop:12}}>🔒 Bilgileriniz güvende · Spam göndermeyiz</p>
+            </div>
+          </div>
+        </div>
+        <svg style={{position:"absolute",bottom:-2,left:0,width:"100%"}} viewBox="0 0 1440 60" fill="none">
+          <path d="M0 30 Q360 60 720 30 Q1080 0 1440 30 L1440 60 L0 60 Z" fill="#f5f4f2"/>
+        </svg>
+      </section>
+
+      {/* SERVICES */}
+      <section id="hizmetler" style={{padding:"80px clamp(16px,4vw,64px)",background:"#f5f4f2"}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:48}}>
+            <div className="tag" style={{marginBottom:16}}>Hizmetlerimiz</div>
+            <h2 className="sf" style={{fontSize:"clamp(26px,4vw,46px)",fontWeight:700}}>Her İhtiyaca Özel <em style={{color:"#b87333"}}>Uzman Çözümler</em></h2>
+          </div>
+          <div style={{display:"flex",gap:4,flexWrap:"wrap",justifyContent:"center",padding:4,background:"#fff",border:"1px solid #e5e1d8",width:"fit-content",margin:"0 auto 28px"}}>
+            {SERVICES.map((s,i) => (
+              <button key={s.id} className="tab-btn" onClick={() => setActiveTab(i)} style={{background:activeTab===i?"linear-gradient(135deg,#b87333,#e8a855)":"transparent",color:activeTab===i?"#fff":"#555560"}}>
+                {s.icon} {s.title}
+              </button>
+            ))}
+          </div>
+          <div style={{background:"#fff",border:"1px solid rgba(184,115,51,.2)",position:"relative",overflow:"hidden"}}>
+            <div style={{position:"absolute",top:0,left:0,right:0,height:3,background:"linear-gradient(90deg,#b87333,#e8a855)"}}></div>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr"}}>
+              <div style={{padding:"36px 30px",borderRight:"1px solid rgba(184,115,51,.1)"}}>
+                <div style={{fontSize:48,marginBottom:16}}>{SERVICES[activeTab].icon}</div>
+                <h3 className="sf" style={{fontSize:26,fontWeight:700,marginBottom:12}}>{SERVICES[activeTab].title}</h3>
+                <div style={{width:40,height:2,background:"linear-gradient(90deg,#b87333,#e8a855)",marginBottom:18}}></div>
+                <p style={{color:"#555560",fontSize:14,lineHeight:1.9,marginBottom:26}}>{SERVICES[activeTab].desc}</p>
+                <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
+                  <a href="#iletisim" className="cb">Teklif Al →</a>
+                  <a href={"https://wa.me/"+BRAND.whatsapp+"?text="+wa} target="_blank" style={{display:"flex",alignItems:"center",gap:6,background:"#25d366",color:"#fff",padding:"14px 18px",textDecoration:"none",fontSize:13,fontWeight:600}}>💬 WhatsApp</a>
+                </div>
+              </div>
+              <div style={{padding:"36px 30px",background:"#faf9f7"}}>
+                <h4 style={{fontSize:11,color:"#888894",letterSpacing:"2px",textTransform:"uppercase",marginBottom:20,fontWeight:600}}>Bu hizmet kapsamında</h4>
+                <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:24}}>
+                  {SERVICES[activeTab].items.map((item,i) => (
+                    <div key={i} style={{display:"flex",gap:12,alignItems:"center"}}>
+                      <div style={{width:26,height:26,background:"rgba(184,115,51,.1)",border:"1px solid rgba(184,115,51,.2)",display:"flex",alignItems:"center",justifyContent:"center",color:"#b87333",fontSize:11,flexShrink:0}}>✦</div>
+                      <span style={{fontSize:14,fontWeight:500}}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <div style={{padding:"18px 20px",background:"rgba(184,115,51,.05)",border:"1px solid rgba(184,115,51,.15)"}}>
+                  <div style={{fontSize:10,color:"#888894",letterSpacing:"2px",textTransform:"uppercase",marginBottom:6}}>Fiyatlandırma</div>
+                  <div className="sf" style={{fontSize:18,fontWeight:600,color:"#b87333"}}>Kişiye Özel Teklif</div>
+                  <div style={{fontSize:12,color:"#555560",marginTop:4}}>Ücretsiz keşif için bizi arayın</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AREAS */}
+      <section id="bolgeler" style={{padding:"80px clamp(16px,4vw,64px)",background:"#2e2e35",position:"relative",overflow:"hidden"}}>
+        <div style={{position:"absolute",width:400,height:400,borderRadius:"50%",background:"#b87333",filter:"blur(130px)",opacity:.05,top:-100,left:-100,pointerEvents:"none"}}></div>
+        <div style={{maxWidth:1100,margin:"0 auto",position:"relative"}}>
+          <div style={{textAlign:"center",marginBottom:48}}>
+            <div className="tag" style={{marginBottom:16}}>Hizmet Bölgelerimiz</div>
+            <h2 className="sf" style={{fontSize:"clamp(26px,4vw,46px)",fontWeight:700,color:"#f0ece4",marginBottom:16}}>Başakşehir Merkezli <em style={{color:"#d4924a"}}>Avrupa Yakası</em></h2>
+            <p style={{color:"rgba(240,236,228,.55)",maxWidth:460,margin:"0 auto",lineHeight:1.8,fontSize:14}}>Başakşehir'den 40 km yarıçap içindeki tüm Avrupa Yakası ilçelerine hizmet veriyoruz.</p>
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:10}}>
+            {AREAS.map((a,i) => (
+              <div key={a} style={{display:"flex",alignItems:"center",gap:10,background:"rgba(184,115,51,.07)",border:"1px solid rgba(184,115,51,.18)",padding:"12px 16px"}}>
+                <div style={{width:8,height:8,background:i===0?"#b87333":"rgba(184,115,51,.5)",borderRadius:"50%",flexShrink:0}}></div>
+                <span style={{color:"#f0ece4",fontWeight:600,fontSize:13}}>{a}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section style={{padding:"80px clamp(16px,4vw,64px)",background:"#fff"}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:60}}>
+            <div className="tag" style={{marginBottom:16}}>Nasıl Çalışır?</div>
+            <h2 className="sf" style={{fontSize:"clamp(26px,4vw,46px)",fontWeight:700}}>4 Adımda <em style={{color:"#b87333"}}>Kusursuz Temizlik</em></h2>
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20,position:"relative"}}>
+            {[
+              {step:"01",icon:"📞",title:"İletişime Geçin",desc:BRAND.phone+" numaralı hattımızı arayın veya WhatsApp'tan yazın."},
+              {step:"02",icon:"📋",title:"Keşif & Teklif",desc:"İhtiyacınızı dinler, ücretsiz ve şeffaf bir teklif sunarız."},
+              {step:"03",icon:"🧹",title:"Temizlik Günü",desc:"Ekibimiz belirlenen saatte kapınızda, profesyonel ekipmanlarla."},
+              {step:"04",icon:"✅",title:"Kontrol & Teslimat",desc:"Birlikte kontrol ederiz. Memnun kalmazsanız anında çözüm."},
+            ].map((item,i) => (
+              <div key={i} style={{textAlign:"center",position:"relative"}}>
+                {i<3 && <div style={{position:"absolute",top:24,left:"58%",right:"-42%",height:1,background:"linear-gradient(90deg,#b87333,rgba(184,115,51,.1))"}}></div>}
+                <div style={{position:"relative",zIndex:1}}>
+                  <div style={{width:50,height:50,background:"#2e2e35",border:"1px solid #b87333",color:"#d4924a",display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:700,letterSpacing:1.5,margin:"0 auto 20px"}}>{item.step}</div>
+                  <div style={{fontSize:32,marginBottom:16}}>{item.icon}</div>
+                  <h4 className="sf" style={{fontSize:18,fontWeight:600,marginBottom:10}}>{item.title}</h4>
+                  <p style={{color:"#555560",fontSize:13,lineHeight:1.8}}>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY US */}
+      <section id="hakkimizda" style={{padding:"80px clamp(16px,4vw,64px)",background:"#f5f4f2"}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:70,alignItems:"center"}}>
+            <div>
+              <div className="tag" style={{marginBottom:16}}>Neden Maisonpak?</div>
+              <h2 className="sf" style={{fontSize:"clamp(26px,4vw,46px)",fontWeight:700,lineHeight:1.15,marginBottom:32}}>{BRAND.founded} den Bu Yana <em style={{color:"#b87333"}}>Güvenilir Hizmet</em></h2>
+              {[
+                {icon:"🌱",title:"Çevre Dostu Ürünler",text:"Yalnızca doğal ve ekolojik ürünler kullanıyoruz. Çocuklar ve evcil hayvanlar için %100 güvenli."},
+                {icon:"🔒",title:"Güvenilir ve Sigortalı Ekip",text:"Tüm personelimiz özgeçmiş kontrolünden geçmiş, sigortalı ve sertifikalıdır."},
+                {icon:"⏱️",title:"Zamanında Hizmet",text:"Randevularınıza dakik geliriz. Gecikmeler için tam iade garantisi."},
+                {icon:"💎",title:"%100 Memnuniyet Garantisi",text:"Memnun kalmazsanız aynı gün ücretsiz yeniden temizlik. Şartsız."},
+              ].map((item,i) => (
+                <div key={i} style={{display:"flex",gap:16,marginBottom:22,alignItems:"flex-start"}}>
+                  <div style={{width:44,height:44,background:"rgba(184,115,51,.08)",border:"1px solid rgba(184,115,51,.18)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:18,flexShrink:0}}>{item.icon}</div>
+                  <div>
+                    <h4 style={{fontWeight:600,marginBottom:5,fontSize:15}}>{item.title}</h4>
+                    <p style={{color:"#555560",fontSize:13,lineHeight:1.8}}>{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+              {[["1.200+","Mutlu Müşteri","#2e2e35"],["9 Yıl","Tecrübe","#fff"],["4.9★","Ortalama Puan","#fff"],["12","Hizmet İlçesi","#2e2e35"]].map(([v,l,bg]) => (
+                <div key={l} style={{padding:"36px 22px",textAlign:"center",background:bg,border:"1px solid "+(bg==="#2e2e35"?"rgba(184,115,51,.25)":"#e5e1d8")}}>
+                  <div className="sf" style={{fontSize:34,fontWeight:700,color:"#d4924a",marginBottom:10}}>{v}</div>
+                  <div style={{fontSize:10,color:bg==="#2e2e35"?"rgba(240,236,228,.45)":"#888894",letterSpacing:"2px",textTransform:"uppercase"}}>{l}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <section style={{padding:"80px clamp(16px,4vw,64px)",background:"#f0ece4"}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:48}}>
+            <div className="tag" style={{marginBottom:16}}>Müşteri Yorumları</div>
+            <h2 className="sf" style={{fontSize:"clamp(26px,4vw,46px)",fontWeight:700,marginBottom:12}}>Müşterilerimiz <em style={{color:"#b87333"}}>Ne Diyor?</em></h2>
+            <div style={{display:"flex",justifyContent:"center",gap:2}}>
+              {"★★★★★".split("").map((s,i) => <span key={i} style={{color:"#b87333",fontSize:20}}>{s}</span>)}
+              <span style={{color:"#555560",fontSize:13,marginLeft:8}}>4.9 / 5 · 200+ değerlendirme</span>
+            </div>
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:16,marginBottom:24}}>
+            {visR.map((r,i) => (
+              <div key={i} className="cl" style={{background:"#fff",border:"1px solid #e5e1d8",padding:"28px 24px"}}>
+                <div style={{marginBottom:12}}>{"★★★★★".split("").map((s,j) => <span key={j} style={{color:"#b87333"}}>{s}</span>)}</div>
+                <p style={{color:"#4a4a52",fontSize:14,lineHeight:1.85,marginBottom:20,fontStyle:"italic"}}>"{r.text}"</p>
+                <div style={{display:"flex",alignItems:"center",gap:10,borderTop:"1px solid #ece8e0",paddingTop:16}}>
+                  <div style={{width:38,height:38,background:"linear-gradient(135deg,#2e2e35,#3d3d47)",border:"1px solid #b87333",display:"flex",alignItems:"center",justifyContent:"center",color:"#d4924a",fontWeight:700,fontSize:12,flexShrink:0}}>{r.initials}</div>
+                  <div>
+                    <div style={{fontWeight:600,fontSize:13}}>{r.name}</div>
+                    <div style={{fontSize:11,color:"#888894"}}>{r.city}, İstanbul</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{display:"flex",justifyContent:"center",gap:8}}>
+            {[0,3].map(i => <button key={i} onClick={() => setReviewIdx(i)} style={{width:reviewIdx===i?28:8,height:8,background:reviewIdx===i?"#b87333":"#c8c2b6",border:"none",borderRadius:4,cursor:"pointer",transition:"all .3s"}}></button>)}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="sss" style={{padding:"80px clamp(16px,4vw,64px)",background:"#fff"}}>
+        <div style={{maxWidth:800,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:48}}>
+            <div className="tag" style={{marginBottom:16}}>SSS</div>
+            <h2 className="sf" style={{fontSize:"clamp(26px,4vw,46px)",fontWeight:700}}>Merak Ettiğiniz <em style={{color:"#b87333"}}>Her Şey</em></h2>
+          </div>
+          <div style={{display:"flex",flexDirection:"column",gap:8}}>
+            {FAQS.map((f,i) => (
+              <div key={i} style={{border:"1px solid "+(activeFaq===i?"#b87333":"#e5e1d8"),transition:"border-color .3s",overflow:"hidden"}}>
+                <button onClick={() => setActiveFaq(activeFaq===i?null:i)} style={{width:"100%",padding:"18px 22px",background:activeFaq===i?"#faf7f3":"#fff",border:"none",cursor:"pointer",display:"flex",justifyContent:"space-between",alignItems:"center",textAlign:"left"}}>
+                  <span style={{fontWeight:600,fontSize:14,color:activeFaq===i?"#b87333":"#1c1c1e"}}>{f.q}</span>
+                  <span style={{color:"#b87333",transition:"transform .3s",transform:activeFaq===i?"rotate(45deg)":"none",fontSize:18,flexShrink:0,marginLeft:12}}>✦</span>
+                </button>
+                {activeFaq===i && <div style={{padding:"0 22px 18px",color:"#555560",fontSize:14,lineHeight:1.85}}>{f.a}</div>}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="iletisim" style={{padding:"80px clamp(16px,4vw,64px)",background:"#f5f4f2"}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:48}}>
+            <div className="tag" style={{marginBottom:16}}>İletişim</div>
+            <h2 className="sf" style={{fontSize:"clamp(26px,4vw,46px)",fontWeight:700}}>Bize <em style={{color:"#b87333"}}>Ulaşın</em></h2>
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:24}}>
+            <div style={{display:"flex",flexDirection:"column",gap:16}}>
+              <div style={{background:"#fff",border:"1px solid #e5e1d8",padding:"28px 24px",position:"relative"}}>
+                <div style={{position:"absolute",top:0,left:0,right:0,height:2,background:"linear-gradient(90deg,#b87333,#e8a855)"}}></div>
+                <h3 className="sf" style={{fontSize:20,marginBottom:20}}>İletişim Bilgileri</h3>
+                {[
+                  {icon:"📞",label:"Telefon",value:BRAND.phone,href:"tel:"+BRAND.phoneTel},
+                  {icon:"💬",label:"WhatsApp",value:BRAND.phone,href:"https://wa.me/"+BRAND.whatsapp+"?text="+wa},
+                  {icon:"📧",label:"E-posta",value:BRAND.email,href:"mailto:"+BRAND.email},
+                  {icon:"📍",label:"Adres",value:BRAND.address,href:null},
+                  {icon:"🕐",label:"Çalışma Saatleri",value:BRAND.hours,href:null},
+                  {icon:"🗺️",label:"Hizmet Bölgesi",value:"Başakşehir ve Çevresi — Avrupa Yakası",href:"#bolgeler"},
+                ].map((item,i) => (
+                  <div key={i} style={{display:"flex",gap:12,alignItems:"flex-start",marginBottom:14,paddingBottom:14,borderBottom:i<5?"1px solid #f0ece4":"none"}}>
+                    <div style={{width:36,height:36,background:"rgba(184,115,51,.07)",border:"1px solid rgba(184,115,51,.15)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:15,flexShrink:0}}>{item.icon}</div>
+                    <div>
+                      <div style={{fontSize:9,color:"#888894",letterSpacing:"2px",textTransform:"uppercase",marginBottom:3}}>{item.label}</div>
+                      {item.href
+                        ? <a href={item.href} target={item.href.startsWith("http")?"_blank":"_self"} style={{color:"#1c1c1e",fontWeight:500,fontSize:13,textDecoration:"none"}}>{item.value}</a>
+                        : <span style={{color:"#1c1c1e",fontWeight:500,fontSize:13}}>{item.value}</span>
+                      }
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div style={{border:"1px solid #e5e1d8",overflow:"hidden"}}>
+                <div style={{height:3,background:"linear-gradient(90deg,#b87333,#e8a855,#b87333)"}}></div>
+                <iframe title="Maisonpak Konum" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48143.97!2d28.7999!3d41.0921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b559df44f62b6d%3A0x26c04f3a8f5da564!2sBa%C5%9Fak%C5%9Fehir%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str" width="100%" height="220" style={{border:0,display:"block"}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+            <div style={{background:"#fff",border:"1px solid #e5e1d8",padding:"32px 28px",position:"relative"}}>
+              <div style={{position:"absolute",top:0,left:0,right:0,height:2,background:"linear-gradient(90deg,#b87333,#e8a855)"}}></div>
+              <h3 className="sf" style={{fontSize:22,marginBottom:8}}>Mesaj Gönderin</h3>
+              <p style={{color:"#888894",fontSize:13,marginBottom:22}}>En kısa sürede size dönüş yapacağız.</p>
+              <div style={{display:"flex",flexDirection:"column",gap:10}}>
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+                  <input placeholder="Ad Soyad *" style={li} value={cf.name} onChange={e => setCf({...cf,name:e.target.value})}/>
+                  <input placeholder="0555 000 00 00" style={li} value={cf.phone} onChange={e => setCf({...cf,phone:e.target.value})}/>
+                </div>
+                <input placeholder={BRAND.email} style={li} value={cf.email} onChange={e => setCf({...cf,email:e.target.value})}/>
+                <select style={li} value={cf.area} onChange={e => setCf({...cf,area:e.target.value})}>
+                  <option value="">Bölgenizi seçin</option>
+                  {AREAS.map(a => <option key={a}>{a}</option>)}
+                </select>
+                <select style={li} value={cf.service} onChange={e => setCf({...cf,service:e.target.value})}>
+                  <option value="">Hizmet seçin</option>
+                  {SERVICES.map(s => <option key={s.id}>{s.icon} {s.title}</option>)}
+                </select>
+                <textarea placeholder="Mesajınız..." style={li} value={cf.msg} onChange={e => setCf({...cf,msg:e.target.value})}/>
+                {cSub
+                  ? <div style={{background:"rgba(184,115,51,.08)",border:"1px solid rgba(184,115,51,.25)",padding:14,textAlign:"center",color:"#b87333",fontSize:14}}>✦ Mesajınız alındı! En kısa sürede dönüş yapacağız.</div>
+                  : <button onClick={iletisimGonder} disabled={cLoad} className="cb" style={{width:"100%",textAlign:"center",opacity:cLoad?0.6:1}}>
+                      {cLoad ? "Gönderiliyor..." : "Gönder ✦"}
+                    </button>
+                }
+                <a href={"https://wa.me/"+BRAND.whatsapp+"?text="+wa} target="_blank" style={{background:"#25d366",color:"#fff",padding:"13px",fontSize:14,fontWeight:600,textDecoration:"none",textAlign:"center",display:"block"}}>💬 WhatsApp ile Yaz</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section style={{padding:"70px clamp(16px,4vw,64px)",background:"linear-gradient(135deg,#1c1c1e 0%,#2e2e35 50%,#3a3018 100%)",textAlign:"center",position:"relative",overflow:"hidden"}}>
+        <div style={{position:"absolute",width:350,height:350,borderRadius:"50%",background:"#b87333",filter:"blur(100px)",opacity:.06,top:"50%",left:"50%",transform:"translate(-50%,-50%)",pointerEvents:"none"}}></div>
+        <div style={{maxWidth:600,margin:"0 auto",position:"relative"}}>
+          <div className="sf" style={{fontSize:44,color:"#b87333",marginBottom:14}}>✦</div>
+          <h2 className="sf" style={{fontSize:"clamp(24px,4vw,46px)",fontWeight:700,color:"#f0ece4",marginBottom:14}}>Kusursuz Temizlik için Hazır mısınız?</h2>
+          <p style={{color:"rgba(240,236,228,.6)",marginBottom:12,fontSize:14,lineHeight:1.8}}>Başakşehir ve çevre ilçelerinde hizmetinizdeyiz.</p>
+          <p style={{color:"rgba(184,115,51,.7)",fontSize:12,marginBottom:30,letterSpacing:1}}>Başakşehir · Esenyurt · Beylikdüzü · Avcılar · Bağcılar · ve daha fazlası</p>
+          <div style={{display:"flex",gap:12,justifyContent:"center",flexWrap:"wrap"}}>
+            <a href={"tel:"+BRAND.phoneTel} className="cb" style={{display:"flex",alignItems:"center",gap:8}}>📞 {BRAND.phone}</a>
+            <a href={"https://wa.me/"+BRAND.whatsapp+"?text="+wa} target="_blank" style={{background:"#25d366",color:"#fff",padding:"14px 24px",fontSize:14,fontWeight:600,textDecoration:"none",display:"flex",alignItems:"center",gap:8}}>💬 WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer style={{background:"#0a0a0c",padding:"44px clamp(16px,4vw,64px) 24px",color:"rgba(255,255,255,.35)",fontSize:13}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{display:"grid",gridTemplateColumns:"2fr 1fr 1fr",gap:40,marginBottom:36}}>
+            <div>
+              <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14}}>
+                <div style={{width:36,height:36,background:"#2e2e35",border:"1.5px solid #b87333",display:"flex",alignItems:"center",justifyContent:"center",position:"relative"}}>
+                  <span className="sf" style={{fontSize:18,fontWeight:700,color:"#b87333"}}>M</span>
+                  <span style={{position:"absolute",bottom:4,right:4,width:5,height:5,background:"#b87333",borderRadius:"50%"}}></span>
+                </div>
+                <div>
+                  <div className="sf" style={{fontSize:16,color:"#f0ece4",fontWeight:700,letterSpacing:1.5}}>MAISONPAK</div>
+                  <div style={{fontSize:8,letterSpacing:"4px",color:"#b87333"}}>TEMİZLİK HİZMETLERİ</div>
+                </div>
+              </div>
+              <p style={{lineHeight:1.8,maxWidth:220,marginBottom:10,fontSize:12}}>Başakşehir merkezli, İstanbul Avrupa Yakası'nda {new Date().getFullYear()-2015} yıllık premium temizlik deneyimi.</p>
+              <div style={{fontSize:12,marginBottom:4}}>{BRAND.email}</div>
+              <div style={{fontSize:12}}>{BRAND.phone}</div>
+            </div>
+            <div>
+              <h5 style={{color:"#f0ece4",fontWeight:600,marginBottom:14,fontSize:12,letterSpacing:".5px"}}>Hizmetler</h5>
+              {SERVICES.map(s => <a key={s.id} href="#hizmetler" style={{display:"block",color:"rgba(255,255,255,.3)",textDecoration:"none",marginBottom:8,fontSize:12}}>{s.title}</a>)}
+            </div>
+            <div>
+              <h5 style={{color:"#f0ece4",fontWeight:600,marginBottom:14,fontSize:12,letterSpacing:".5px"}}>Bölgeler</h5>
+              {AREAS.slice(0,7).map(a => <a key={a} href="#bolgeler" style={{display:"block",color:"rgba(255,255,255,.3)",textDecoration:"none",marginBottom:8,fontSize:12}}>{a}</a>)}
+            </div>
+          </div>
+          <div style={{borderTop:"1px solid rgba(184,115,51,.1)",paddingTop:20,display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:10}}>
+            <div>© {new Date().getFullYear()} Maisonpak Temizlik Hizmetleri. Tüm hakları saklıdır.</div>
+            <div style={{display:"flex",gap:6,alignItems:"center"}}>
+              <div style={{width:7,height:7,background:"#25d366",borderRadius:"50%",animation:"pulse 2s infinite"}}></div>
+              <span>Şu an çevrimiçi · Hemen yanıt verebiliriz</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App/>);
+</script>
+</body>
+</html>
